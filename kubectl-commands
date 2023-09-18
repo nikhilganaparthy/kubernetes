@@ -1,0 +1,2 @@
+kubectl get nodes              -> to check nodes of kubenetes
+kubectl get nodes -o wide      -> to get flavor and version of Operating System on which the Kubernetes nodes are running
