@@ -3,4 +3,8 @@ kubectl get nodes -o wide      -> to get flavor and version of Operating System 
 kubectl run nginx --image nginx -> creates a pod automatically and deploy an instance of the nginx docker image as container.
 kubectl get pods               -> to list the pods available in our cluster.
 kubectl describe pod nginx     -> provides additional info about the pod and container, image inside the pod.
+kubectl create -f pod.config.yml -> to create yaml kubernetes yaml configuration file.
+or
+kubectl apply -f pod.yaml
+
 
