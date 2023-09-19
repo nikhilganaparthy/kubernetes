@@ -11,7 +11,10 @@ kubectl create -f replicaset-def.yaml  -> to create a replica set file.
 kubectl get replicaset         -> to see the list of replicasets created
 kubectl delete replicaset replicaset-name   ->  to delete the replicaset and deletes all underlying pods.
 kubectl replace -f replicaset-def.yaml   -> to replace or update the replicaset.
-kubectl scale --replicas=6 -f replicaset-def.yaml  -> to scale the replicas simply from the command line.
+kubectl scale --replicas=6 -f replicaset-def.yaml  -> to scale the replicas simply from the command line
+kubectl describe replicaset myapp-replicaset   -> to view more info about the replicaset.
+kubectl delete pod pod-name    -> deleted the pod under replicaset.
+kubectl edit replicaset name-of-replicaset  ->  to edit the yaml config file of replicaset
 
 
 
