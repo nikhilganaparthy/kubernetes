@@ -6,5 +6,12 @@ kubectl describe pod nginx     -> provides additional info about the pod and con
 kubectl create -f pod.config.yml -> to create yaml kubernetes yaml configuration file.
 or
 kubectl apply -f pod.yaml
+kubectl edit pod image_name     -> to edit the image name inside the pod.
+kubectl create -f replicaset-def.yaml  -> to create a replica set file.
+kubectl get replicaset         -> to see the list of replicasets created
+kubectl delete replicaset replicaset-name   ->  to delete the replicaset and deletes all underlying pods.
+kubectl replace -f replicaset-def.yaml   -> to replace or update the replicaset.
+kubectl scale --replicas=6 -f replicaset-def.yaml  -> to scale the replicas simply from the command line.
+
 
 
