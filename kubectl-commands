@@ -7,6 +7,9 @@ kubectl create -f pod.config.yml -> to create yaml kubernetes yaml configuration
 or
 kubectl apply -f pod.yaml
 kubectl edit pod image_name     -> to edit the image name inside the pod.
+
+---REPLICASET ---
+
 kubectl create -f replicaset-def.yaml  -> to create a replica set file.
 kubectl get replicaset         -> to see the list of replicasets created
 kubectl describe replicaset name-of-replicaset  -> to view more info about replicaset
@@ -15,6 +18,14 @@ kubectl replace -f replicaset-def.yaml   -> to replace or update the replicaset.
 kubectl scale --replicas=6 -f replicaset-def.yaml  -> to scale the replicas simply from the command line.
 kubectl delete pod pod-name    -> deleted the pod under replicaset.
 kubectl edit replicaset name-of-replicaset  ->  to edit the yaml config file of replicaset.
+
+--- Deployment ---
+
+kubectl create -f deployment-def.yaml   -> creates deployment object and above that creates replicaset and pods inside that.
+kubectl get deployment       ->  shows all the deployment objects
+kubectl get all              ->  shows deployments, replicasets, and pods
+
+
 
 
 
