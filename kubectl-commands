@@ -24,6 +24,12 @@ kubectl edit replicaset name-of-replicaset  ->  to edit the yaml config file of 
 kubectl create -f deployment-def.yaml   -> creates deployment object and above that creates replicaset and pods inside that.
 kubectl get deployment       ->  shows all the deployment objects
 kubectl get all              ->  shows deployments, replicasets, and pods
+kubectl rollout status deployment/name-of-deploy  ->  shows the status of the rollout deployment
+kubectl rollout history deployment/name-of-deploy ->  show the history & revisions of our deployment.
+kubectl apply -f deployment-definition.yaml       ->  to apply the changes made in file and starts rolling update.
+kubectl rollout undo deployment/name-of-deploy    ->  to rollback changes to the preveous deployment.
+
+
 
 
 
