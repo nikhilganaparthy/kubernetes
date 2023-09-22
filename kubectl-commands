@@ -31,6 +31,11 @@ kubectl edit deployment name-of-deploy --record   ->  to edit the yaml file and 
 kubectl apply -f deployment-definition.yaml       ->  to apply the changes made in file and starts rolling update.
 kubectl rollout undo deployment/name-of-deploy    ->  to rollback changes to the preveous deployment.
 
+--- service ---
+
+kubectl create -f service-definition.yaml   -> to create a yaml file which helps the requests of user goes through the ports.
+kubectl service servive-name --url       -> gives the url of the application running on the node.
+
 
 
 
