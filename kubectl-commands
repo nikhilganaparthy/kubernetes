@@ -37,6 +37,7 @@ kubectl create -f service-definition.yaml   -> to create a yaml file which helps
 kubectl service servive-name --url       -> gives the url of the application running on the node.
 kubectl describe service                 -> more info about service like ports, endpoints.
 kubectl apply -f service-definition.yaml -> to apply the changes after editing the file.
+minikube service list          ->  lists all services.
 
 
 
