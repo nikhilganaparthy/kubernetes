@@ -35,6 +35,8 @@ kubectl rollout undo deployment/name-of-deploy    ->  to rollback changes to the
 
 kubectl create -f service-definition.yaml   -> to create a yaml file which helps the requests of user goes through the ports.
 kubectl service servive-name --url       -> gives the url of the application running on the node.
+kubectl describe service                 -> more info about service like ports, endpoints.
+kubectl apply -f service-definition.yaml -> to apply the changes after editing the file.
 
 
 
