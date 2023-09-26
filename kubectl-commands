@@ -48,6 +48,14 @@ kubectl get pods -n kube-system    -> to view the ectd which is configured as a 
 kubectl exec etcd-master -n kube-system   --> to enter in to the etcd pod
 etcdctl get / --prefix -keys-only    ->  to list the keys that kubernetes stored.
 
+--- Kube API-server ---
+
+kube-apiserver.service            -> opens the file of kube API server options of cert files, urls, connectivities and many other options.
+kubectl get pods -n kube-system   -> to view kube API server service deployed as pod in master  node.
+cat /etc/kubernetes/manifests/kube-apiserver.yaml     -> in kubeadm setup, to see kube api server options from inside the pod in master node.
+cat /etc/systemd/system/kube-apiserver.service        -> in non kubeadm service, to see kube API server options.
+ps -aux | grep kube-apiserver          -> to search the processes running on master node with kube-api server.
+
 
 
 
