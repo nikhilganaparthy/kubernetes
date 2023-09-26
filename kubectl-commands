@@ -39,6 +39,16 @@ kubectl describe service                 -> more info about service like ports, 
 kubectl apply -f service-definition.yaml -> to apply the changes after editing the file.
 minikube service list          ->  lists all services.
 
+--- ETCD ---
+
+etcdctl --version              -> checks teh version of etcd
+./etcdctl put key1 value1      -> updated the new value in the ectd store
+./ectdctl get key1             -> extracts the value of the given key
+kubectl get pods -n kube-system    -> to view the ectd which is configured as a pod by kubeadm
+kubectl exec etcd-master -n kube-system   --> to enter in to the etcd pod
+etcdctl get / --prefix -keys-only    ->  to list the keys that kubernetes stored.
+
+
 
 
 
