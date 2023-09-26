@@ -61,7 +61,8 @@ ps -aux | grep kube-apiserver          -> to search the processes running on mas
 kube-controller-manager.service          -> to see all controllers and options after installation without kubeadm tool.
 kubectl get pods -n kube-system         -> to view controller pod which runs on master node.
 cat /etc/kubernetes/manifests/kube-controller-manager.yaml  ->   to see kube controller options in kubeadm env.
-cat /etc/systemd/system/kube-controller-manager.service     ->  to view options in non kubeadm setup,
+cat /etc/systemd/system/kube-controller-manager.service     ->  to view options in non kubeadm setup.
+ps aux | grep kube-controller-manager    ->   to see running processes that are searching for kube controller.
 
 
 
