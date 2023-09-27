@@ -64,6 +64,21 @@ cat /etc/kubernetes/manifests/kube-controller-manager.yaml  ->   to see kube con
 cat /etc/systemd/system/kube-controller-manager.service     ->  to view options in non kubeadm setup.
 ps aux | grep kube-controller-manager    ->   to see running processes that are searching for kube controller.
 
+--- kube scheduler ---
+
+kube-scheduler.service        ->   to run it as a service ( without kubeadm tool )
+kubectl get pods -n kube-system  ->   to see scheduling running as a pod in master node
+cat /etc/kubernetes/manifests/kube-scheduler.yaml     ->    to see scheduling options.
+ps aux | grep kube-scheduler      ->  to see running processes on master reg kube-scheduler.
+
+
+--- kube-proxy ---
+
+kubectl get pods -n kube-syatem    ->  to see the kube proxy pod in master node
+kubectl get daemonset -n kube-system
+
+
+
 
 
 
