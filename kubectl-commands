@@ -83,13 +83,18 @@ kubectl get namespaces                -> to get all the namespaces available in 
 kubectl get pods                              -> shows the pods from default namespace
 kubectl get pods --namespace=kube-system      -> to list the pods from the other namespace called kube-system.
 kubectl create pod pod-def.yaml               -> to create a pod with definition file in default namespace.
+kubectl run redis --image=redis --namespace=finance   -> to create a pod with an image from CLI
 kubectl create pod pod-def.yaml --namespace=dev -> to create a pod from pod definition file in dev namespace.
 kubectl create namespace dev         -> to create a new namespace from CLI
 kubectl create -f namespace-dev.yaml -> to create a new namespace from definition file.
+kubectl get svc -n=dev       ->  to get the services from the dev namespace.
+
 
 kubectl config set-context $(kubectl config current-context) --namespace=dev    -> to switch from one namespace to another one permanantly.
 
 kubectl get pods --all-namespaces     -> to get the pods from all the namespaces.
+          or 
+kubectl get pods -A     
 
 ## Most Kubernetes resources (e.g. pods, services, replication controllers, and others) are in some namespaces. 
 However namespace resources are not themselves in a namespace. And low-level resources, such as nodes and persistentVolumes,
