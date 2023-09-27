@@ -77,6 +77,28 @@ ps aux | grep kube-scheduler      ->  to see running processes on master reg kub
 kubectl get pods -n kube-syatem    ->  to see the kube proxy pod in master node
 kubectl get daemonset -n kube-system
 
+--- Namespaces ---
+
+kubectl get namespaces                -> to get all the namespaces available in our cluster.
+kubectl get pods                              -> shows the pods from default namespace
+kubectl get pods --namespace=kube-system      -> to list the pods from the other namespace called kube-system.
+kubectl create pod pod-def.yaml               -> to create a pod with definition file in default namespace.
+kubectl create pod pod-def.yaml --namespace=dev -> to create a pod from pod definition file in dev namespace.
+kubectl create namespace dev         -> to create a new namespace from CLI
+kubectl create -f namespace-dev.yaml -> to create a new namespace from definition file.
+
+kubectl config set-context $(kubectl config current-context) --namespace=dev    -> to switch from one namespace to another one permanantly.
+
+kubectl get pods --all-namespaces     -> to get the pods from all the namespaces.
+
+## Most Kubernetes resources (e.g. pods, services, replication controllers, and others) are in some namespaces. 
+However namespace resources are not themselves in a namespace. And low-level resources, such as nodes and persistentVolumes,
+are not in any namespace ##
+
+kubectl api-resources --namespaced=true    -> To see which Kubernetes resources are in a namespace.
+kubectl api-resources --namespaced=false   -> To see which Kubernetes resources are not in a namespace.
+
+
 
 
 
