@@ -30,6 +30,8 @@ kubectl rollout history deployment/name-of-deploy ->  show the history & revisio
 kubectl edit deployment name-of-deploy --record   ->  to edit the yaml file and records wt edited.
 kubectl apply -f deployment-definition.yaml       ->  to apply the changes made in file and starts rolling update.
 kubectl rollout undo deployment/name-of-deploy    ->  to rollback changes to the preveous deployment.
+kubectl scale deployment nginx --replicas=5       ->  to scale the replicas inside the deployment
+kubectl set image deployment nginx nginx=nginx:1.18 -> to set the image inside the deployment
 
 --- service ---
 
