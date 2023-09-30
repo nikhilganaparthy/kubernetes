@@ -105,6 +105,17 @@ are not in any namespace ##
 kubectl api-resources --namespaced=true    -> To see which Kubernetes resources are in a namespace.
 kubectl api-resources --namespaced=false   -> To see which Kubernetes resources are not in a namespace.
 
+--- Labels and Selectors ---
+
+kubectl get pods --selector app=app1       -> to get the pods with those labels 
+
+
+
+--- Taints and Tolerations ---
+kubectl taint nodes node-name key=value:taint-effect    -> to assign a taint to a node with keys and values and effects.
+kubectl describe node kubemaster | grep taint           -> to check the taints of the master node in the cluster
+
+
 
 
 
