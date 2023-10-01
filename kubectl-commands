@@ -108,12 +108,16 @@ kubectl api-resources --namespaced=false   -> To see which Kubernetes resources 
 --- Labels and Selectors ---
 
 kubectl get pods --selector app=app1       -> to get the pods with those labels 
+kubectl get pods --selector env=prod,tier=frontend,bu=finance    -> to get the pods which are common in all environmets.
 
 
 
 --- Taints and Tolerations ---
 kubectl taint nodes node-name key=value:taint-effect    -> to assign a taint to a node with keys and values and effects.
-kubectl describe node kubemaster | grep taint           -> to check the taints of the master node in the cluster
+kubectl taint nodes node01 spray=mortein:NoSchedule     
+kubectl describe node node01 | grep -i taints           -> to check the taints of the master node in the cluster
+kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-   -> to untain the taint from the node.
+
 
 
 
