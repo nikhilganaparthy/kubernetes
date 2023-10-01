@@ -119,6 +119,19 @@ kubectl describe node node01 | grep -i taints           -> to check the taints o
 kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-   -> to untain the taint from the node.
 
 
+--- Node Affinity ---
+
+kubectl label nodes node01 color=blue    -> to label a node
+
+
+--- Daemonset ---
+
+kubectl get daemonset     -> to get all daemonsets
+kubectl describe daemonset name-of-daemonset    ->  to view more info
+
+
+
+
 
 
 
