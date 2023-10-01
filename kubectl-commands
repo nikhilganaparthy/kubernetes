@@ -126,8 +126,18 @@ kubectl label nodes node01 color=blue    -> to label a node
 
 --- Daemonset ---
 
-kubectl get daemonset     -> to get all daemonsets
+kubectl get daemonset -A     -> to get all daemonsets
 kubectl describe daemonset name-of-daemonset    ->  to view more info
+kubectl describe daemonset kube-flannel-ds --namespace=kube-flannel    -> to check info about  the daemonset in a perticular namespace.
+
+
+--- static pods ---
+
+kubectl run --restart=Never --image=busybox static-busybox --dry-run=client -o yaml > /etc/kubernetes/manifests/static-busybox.yaml -> 
+to create a static pod.
+
+cat /var/lib/kubelet/config.yaml  ->  to check config.yaml for static pod path
+
 
 
 
