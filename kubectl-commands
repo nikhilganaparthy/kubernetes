@@ -139,6 +139,14 @@ to create a static pod.
 cat /var/lib/kubelet/config.yaml  ->  to check config.yaml for static pod path
 
 
+--- Scheduler ---
+
+kubectl get pods -o wide        ->  to check the pods and scheduler which picked up that pod.
+kubectl logs my-custom-scheduler --name-space=kube-system    -> to view the logs 
+
+
+
+
 
 
 
