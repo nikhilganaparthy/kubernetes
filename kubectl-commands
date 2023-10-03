@@ -42,6 +42,14 @@ kubectl describe service                 -> more info about service like ports, 
 kubectl apply -f service-definition.yaml -> to apply the changes after editing the file.
 minikube service list          ->  lists all services.
 
+--- imperative commands ---
+
+kubectl expose pod redis --name redis-service --port=6379    -> to create a service with pod and expose to port
+kubectl run custom-nginx --image=nginx --port=8080           -> to create a pod with an image and expose it to the container port 
+kubectl create namespace dev                                 -> to create a namespace
+kubectl create deploy redis-deploy -n dev-ns --image=redis --replicas=2    -> to create a deployment in namespace with replicas.
+
+
 --- ETCD ---
 
 etcdctl --version              -> checks teh version of etcd
