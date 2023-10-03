@@ -21,6 +21,7 @@ kubectl edit replicaset name-of-replicaset  ->  to edit the yaml config file of 
 
 --- Deployment ---
 
+kubectl create deploy deploy-name --image=nginx --replicas=3 --dry-run=client -o wide > deploy.yaml
 kubectl create -f deployment-def.yaml   -> creates deployment object and above that creates replicaset and pods inside that.
 kubectl create -f deployment-def.yaml --record   -> record option instructs the kubernetes the cause of change.
 kubectl get deployments       ->  shows all the deployment objects
