@@ -169,6 +169,19 @@ kubctl logs -f pod-name           -> to view the logs of container running in po
 kubectl logs -f pod-name container-name  -> if multiple containers are running in a pod.
 
 
+--- Rolling Updates ---
+
+kubectl create -f deployment-def.yaml          -> to create deployment    
+kubectl get deployments
+kubectl rollout status deployment/myapp-deployment     ->  to see the status of the rollout 
+kubectl rollout history deployment/myapp-deployment    ->  to see the history and revisions of deployment.
+kubectl apply -f deployment.yaml                       ->  to apply the changes after updating the container version in the deploy file.
+kubectl describe deployment/myapp-deployment           ->  to view detailed info about the deployment 
+kubectl get replicasets                                ->  to see old and new replicasets.
+kubectl rollout undo deployment/myapp-deployment       ->  to comeback to the older version or revision of the application deployment.
+
+
+
 
 
 
