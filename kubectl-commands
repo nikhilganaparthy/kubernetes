@@ -183,6 +183,12 @@ kubectl get replicasets                                ->  to see old and new re
 kubectl rollout undo deployment/myapp-deployment       ->  to comeback to the older version or revision of the application deployment.
 
 
+--- Arguments & Commands ---
+
+kubectl run webapp --image=nginx -- --color green    ->  to change override the arguments inside the docker file.
+
+
+
 
 
 
