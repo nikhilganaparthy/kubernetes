@@ -7,7 +7,8 @@ kubectl create -f pod.config.yml -> to create yaml kubernetes yaml configuration
 or
 kubectl apply -f pod.yaml
 kubectl edit pod image_name     -> to edit the image name inside the pod.
-kubectl replace --force -f /tmp/kubectl-edit../..yaml    -> to replace the file after editing.
+kubectl replace --force -f /tmp/kubectl-edit../..yaml    -> after making change inside the pod, this will delete the pod and creates new pod.
+
 
 ---REPLICASET ---
 
