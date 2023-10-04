@@ -154,6 +154,20 @@ kubectl get pods -o wide        ->  to check the pods and scheduler which picked
 kubectl logs my-custom-scheduler --name-space=kube-system    -> to view the logs 
 
 
+--- Deploy Metrics server ---
+
+git clone https://github.com/kodekloudhub/kubernetes-metrics-server.git
+cd kubernetes-metrics-server/
+kubectl create -f .
+kubectl top node
+kubectl top pod
+
+--- Monitor logs ---
+
+docker logs -f container-name     -> to see the live logs of a container in docker
+kubctl logs -f pod-name           -> to view the logs of container running in pod
+kubectl logs -f pod-name container-name  -> if multiple containers are running in a pod.
+
 
 
 
