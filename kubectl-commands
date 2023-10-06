@@ -191,10 +191,12 @@ kubectl run webapp --image=nginx -- --color green    ->  to change override the 
 
 --- secrets ---
 
+kubectl create secret generic db-secret --from-literal=DB_User=root --from-literal=DB_Password=password123   -> to create a secret imperative way.
 kubectl create -f secrets.yaml    -> to create secrets definition file just like pod def file
 echo -n 'mysql; | base64          -> to convert plain text to encoded format
 kubectl get secrets               -> shows all the secrets files
 kubectl describe secrets          -> shows the attributes of secrets and but hides values.
+kubectl describe secrets secret-name  -> to see how many secrets are defined in a secret file.
 kubectl get secret app-secret -o yaml  -> to view the values as well
 echo -n 'hjcbwk=' | base64 --decode    -> to decode the values
 
