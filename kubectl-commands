@@ -186,6 +186,10 @@ kubectl rollout undo deployment/myapp-deployment       ->  to comeback to the ol
 --- Arguments & Commands ---
 
 kubectl run webapp --image=nginx -- --color green    ->  to change override the arguments inside the docker file.
+kubectl get configmaps
+kubectl describe configmaps name-of-configmap
+kubectl create configmap  webapp-config-map --from-literal=APP_COLOR=darkblue --from-literal=APP_OTHER=disregard
+
 
 
 
