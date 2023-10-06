@@ -199,6 +199,7 @@ kubectl describe secrets          -> shows the attributes of secrets and but hid
 kubectl describe secrets secret-name  -> to see how many secrets are defined in a secret file.
 kubectl get secret app-secret -o yaml  -> to view the values as well
 echo -n 'hjcbwk=' | base64 --decode    -> to decode the values
+kubectl get secrets --all-namespaces -o json | kubectl replace -f -   -> to ensure all the secret file encrypted.
 
 
 
