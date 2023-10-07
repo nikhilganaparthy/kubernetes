@@ -206,6 +206,15 @@ echo -n 'hjcbwk=' | base64 --decode    -> to decode the values
 kubectl get secrets --all-namespaces -o json | kubectl replace -f -   -> to ensure all the secret file encrypted.
 
 
+--- multi-container ---
+
+kubectl logs pod-name -n namespace       -> to see the logs if the pod.
+kubectl -n namespace exec -it pod-name -- cat /log/pod-name.log     ->  to see the log by entering in to the pod.
+
+
+
+
+
 
 
 
