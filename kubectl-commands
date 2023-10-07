@@ -223,7 +223,27 @@ kubectl cordon node01         ->  to drain the node without removing the pods an
 
 --- cluster upgrade ---
 
-kubeadm upgrade plan     -> gives good plan of upgrades
+upgrade kubeadm in master node
+kubeadm upgrade plan           -> gives good plan of upgrades
+kubeadm upgrade apply v1.25.x  -> upgrade the master node
+drain the master node for kubelet upgrade
+upgrade kubelet
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+
+- NOW UPGRADE THE WORKER NODE -
+
+ssh node01
+upgrade kubeadm
+kubeadm upgrade node
+drain worker node from master node
+upgrade kubelet
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+
+
+
+
 
 
 
