@@ -221,6 +221,12 @@ kubectl drain node01 --ignore-daemonsets --force   -> to forcefully drain the no
 kubectl cordon node01         ->  to drain the node without removing the pods and make unscheduled for any other pods
 
 
+--- cluster upgrade ---
+
+kubeadm upgrade plan     -> gives good plan of upgrades
+
+
+
 
 
 
