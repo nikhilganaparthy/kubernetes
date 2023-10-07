@@ -213,6 +213,15 @@ kubectl -n namespace exec -it pod-name -- cat /log/pod-name.log     ->  to see t
 
 
 
+--- Cluster Maintainance ---
+
+kubectl drain node01 --ignore-daemonsets  -> to drain the node for upgrade
+kubectl uncordon node01       ->  to undrain the node and to bering back to the cluster
+kubectl drain node01 --ignore-daemonsets --force   -> to forcefully drain the node when the pod is not part of replicaset
+kubectl cordon node01         ->  to drain the node without removing the pods and make unscheduled for any other pods
+
+
+
 
 
 
