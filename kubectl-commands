@@ -242,6 +242,13 @@ sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 
 
+--- Certificates ---
+
+openssl x509 -in < cert_path > -text -noout   ->  to see the details of the certificate 
+
+
+
+
 
 
 
