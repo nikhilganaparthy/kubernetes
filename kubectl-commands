@@ -252,6 +252,15 @@ kubectl certificate deny agent-smith    -> to deny the CSR of user
 kubectl delete csr agent-smith          -> to delete the csr object
 
 
+--- kubeconfig ---
+
+kubectl config view      -> to view the current config file 
+kubectl config view --kubeconfig=my-custom-config    ->  to view the specific kubeconfig file we want 
+kubectl config use-context prod-user@production      ->  to change the context used by the user in config file
+kubectl config -h        -> to see all the other options to use for changing the details from cli
+
+
+
 
 
 
