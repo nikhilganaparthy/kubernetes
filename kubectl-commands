@@ -245,6 +245,14 @@ sudo systemctl restart kubelet
 --- Certificates ---
 
 openssl x509 -in < cert_path > -text -noout   ->  to see the details of the certificate 
+kubectl get csr        -> to display all the certificate signing requests
+kubectl certificate approve name        ->  to approve the certificate signing request
+kubectl get csr agent-smith -o yaml     -> to check the yaml file of the CSR request from user
+kubectl certificate deny agent-smith    -> to deny the CSR of user
+kubectl delete csr agent-smith          -> to delete the csr object
+
+
+
 
 
 
