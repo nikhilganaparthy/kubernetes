@@ -260,6 +260,29 @@ kubectl config use-context prod-user@production      ->  to change the context u
 kubectl config -h        -> to see all the other options to use for changing the details from cli
 
 
+--- Role based Authorization ---
+
+kubectl get roles                 -> to list roles
+kubectl get roles -A
+kubectl edit role role-name -n name  -> to view a role in an namespace
+kubectl get rolebindings          -> to list role bindings
+kubectl describe role developer   -> to view more details about the roles
+kubectl describe rolebinding devuser-developer-binding   -> to view more details about the rolebinding
+kubectl auth can-i create deployments     -> as a user to test we access or not
+kubectl auth can-i delete pods            -> 
+kubectl auth can-i create deployments --as dev-user  -> to test access for other user
+kubectl auth can-i delete pods --as dev-user         -> 
+kubectl auth can-i delete pods --as dev-user --namespace test -> to test in specific namespace
+
+kubectl create role developer --namespace=default --verb=list,create,delete --resource=pods
+kubectl create rolebinding dev-user-binding --namespace=default --role=developer --user=dev-user
+
+
+
+
+
+
+
 
 
 
