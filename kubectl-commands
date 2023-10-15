@@ -280,6 +280,12 @@ kubectl create rolebinding dev-user-binding --namespace=default --role=developer
 
 --- Cluster Roles ---
 
+kubectl get clusterroles --no-headers | wc -l    
+kubectl get clusterrolebindings --no-headers | wc -l
+kubectl describe clusterrole cluster-admin
+kubectl create clusterrole node-admin --verb=list,create,delete,get,watch --resource=nodes
+kubectl create clusterrolebinding michelle-binding --clusterrole=node-admin --user=michelle 
+kubectl describe clusterrolebinding cluster-admin
 kubectl api-resources --namespaced=true     -> to see all the resources which comes under namespace
 kubectl api-resources --namespaced=false    -> to see all the resources which comes under cluster scoped 
 kubectl create -f cluster-admin-role.yaml   -> object file to create a cluster role
