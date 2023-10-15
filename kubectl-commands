@@ -303,6 +303,12 @@ kubectl create token dashboard-sa        -> to create a token in version 1.24
 kubectl exec pod-name -- whoami    -> to know which user is running the pod
 
 
+--- Network Policy ---
+
+kubectl get networkpolicy
+
+
+
 
 
 
