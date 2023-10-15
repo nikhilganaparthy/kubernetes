@@ -298,6 +298,11 @@ kubectl create serviceaccount dashboard-sa   -> to create service account in ver
 kubectl create token dashboard-sa        -> to create a token in version 1.24
 
 
+--- security context ---
+
+kubectl exec pod-name -- whoami    -> to know which user is running the pod
+
+
 
 
 
