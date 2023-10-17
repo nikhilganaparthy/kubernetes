@@ -308,6 +308,13 @@ kubectl exec pod-name -- whoami    -> to know which user is running the pod
 kubectl get networkpolicy
 
 
+--- Persistent Volume ---
+
+kubectl get persistentvolumeclaim  
+kubectl create -f pvc-def.yaml
+kubectl delete persistentvolumeclaim 
+
+
 
 
 
