@@ -310,9 +310,13 @@ kubectl get networkpolicy
 
 --- Persistent Volume ---
 
-kubectl get persistentvolumeclaim  
+kubectl get persistentvolumeclaim 
 kubectl create -f pvc-def.yaml
 kubectl delete persistentvolumeclaim 
+kubectl get pv
+kubectl get pvc
+kubectl get sc
+
 
 
 
