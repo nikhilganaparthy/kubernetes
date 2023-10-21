@@ -353,11 +353,22 @@ ip -n red link del veth-red     -> to delete a link between namespaces
 ip link set veth-red netns red     -> to attach the interface to a namespace
 ip -n red addr add 192.168.15.1 dev veth-red    -> to add ip address to the interface 
 ip -n red link set veth-red up    -> to bring up the interface 
-ip link add v-net-0 type bridge    -> to create a bridge network for connecting namespaces
 
+------> create a bridge network for connecting the namespaces
+
+ip link add v-net-0 type bridge    -> to create a bridge network for connecting namespaces
 ip link add veth-red type veth peer name veth-red-br    -> to create a cable between namespace and the bridge.
 ip link set veth-red netns red           -> to connect one end of cable to namespace
 ip link set veth-red-br master v-net-0   -> to connect other end of cable to bridge network.
+ip -n red addr add 192.168.15.1 dev veth-red    -> to add ip address to the interface of namespace
+ip -n red link set veth-red up    -> to turn the device up.
+
+
+-----> to reach the namespaces from host
+
+ip addr add 192.168.15.2/24 dev v-net-0    -> to add ip address to the already existed interface on bridge network
+ip route add 192.168.1.0/24 via 192.168.15.5   -> to reach the other network via the host interface.
+ip route add default via 192.168.15.5     -> namespace to reach the internet via the local host interface.
 
 
 
