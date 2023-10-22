@@ -371,6 +371,18 @@ ip route add 192.168.1.0/24 via 192.168.15.5   -> to reach the other network via
 ip route add default via 192.168.15.5     -> namespace to reach the internet via the local host interface.
 
 
+----> Docker Networking
+
+docker network ls    -> to see all the network docker connected to.
+ip link add docker0 type bridge    -> 
+ip addr     -> to see the ip of the bridge network
+ip netns    -> to list the namespace in the container.
+docker inspect namespace-id    -> to check the namespace
+ip -n namespace-id addr    -> to check the ip address of the interface end attched to container
+ip tables -nvL -t nat      -> to check the rule inside NAT  ip tables.
+
+
+
 
 
 
