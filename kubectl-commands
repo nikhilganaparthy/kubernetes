@@ -353,6 +353,7 @@ ip -n red link del veth-red     -> to delete a link between namespaces
 ip link set veth-red netns red     -> to attach the interface to a namespace
 ip -n red addr add 192.168.15.1 dev veth-red    -> to add ip address to the interface 
 ip -n red link set veth-red up    -> to bring up the interface 
+netstat -nplt | grep scheduler    -> to find out the port number of the component in the node 
 
 ------> create a bridge network for connecting the namespaces
 
