@@ -1,0 +1,6 @@
+1. Why kubernetes?
+
+-> docker is a single host where one container will be affected by other
+-> There is no auto-healing in docker. if a container goes down, user should manulally track and bring them up.
+-> there is no auto-scaling in docker.
+-> docker does not support enterprise level standards like LB, firewall, autoscale, heal, apigateway.
