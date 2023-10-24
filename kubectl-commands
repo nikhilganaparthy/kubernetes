@@ -383,6 +383,14 @@ ip -n namespace-id addr    -> to check the ip address of the interface end attch
 ip tables -nvL -t nat      -> to check the rule inside NAT  ip tables.
 
 
+--- CNI plugin ---
+
+cd /opt/cni/bin    -> all the available plugins stored
+cd /etc/cni/net.d   -> configuration file of the cni plugin 
+
+
+
+
 
 
 
